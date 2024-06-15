@@ -9,7 +9,6 @@ class NodeMgmt:
 
     def add(self, data):
         if self.head == '':
-            print(data)
             self.head = Node(data)
         else:
             node = self.head
@@ -28,4 +27,4 @@ linkedlist1.desc()
 
 for data in range(1, 10):
     linkedlist1.add(data)
-# linkedlist1.desc()
+linkedlist1.desc()
