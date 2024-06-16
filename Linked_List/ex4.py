@@ -41,6 +41,34 @@ class NodeMgmt:
                     return
                 else:
                     node = node.next
+    def search_node(self, data):
+        node = self.head
+        while node:
+            if node.data == data:
+                return node
+            else:
+                node = node.next
 
 linkedlist1 = NodeMgmt(0)
 linkedlist1.desc()
+
+print(linkedlist1.head)
+
+linkedlist1.delete(0)
+
+print(linkedlist1.head)
+
+linkedlist1 = NodeMgmt(0)
+linkedlist1.desc()
+
+for data in range(1, 10):
+    linkedlist1.add(data)
+linkedlist1.desc()
+
+linkedlist1.delete(4)
+linkedlist1.desc()
+linkedlist1.delete(9)
+linkedlist1.desc()
+
+node = linkedlist1.search_node(3)
+print(node.data)
